@@ -2,13 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="EU AI Briefing: future human-approved, source-backed EU AI policy and practical adoption briefings for European SMEs." />
     <meta name="theme-color" content="#f5f1e8" />
     <title>EU AI Briefing — Official signals, read with care</title>
+    <!-- Civic Ledger design: a direct, public-only editorial sheet with no private routes or hidden application state. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root { --paper:#f5f1e8; --stone:#e7e1d5; --ink:#17212e; --blue:#123a70; --gold:#bd8822; --muted:#5e665f; }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin:0; background:var(--paper); color:var(--ink); font-family:Manrope, sans-serif; }
+      a { color:inherit; }
+      .shell { max-width:1440px; margin:0 auto; padding:0 48px; }
+      header { border-bottom:1px solid #17212e26; background:#f5f1e8f2; }
+      .topline { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+      .brand { display:flex; gap:12px; align-items:center; text-decoration:none; }
+      .seal { position:relative; width:38px; height:38px; border:1.5px solid var(--blue); border-radius:50%; display:flex; gap:3px; align-items:center; justify-content:center; flex:none; }
+      .seal span { width:3px; height:18px; background:var(--blue); } .seal span:nth-child(2){height:23px}.seal span:nth-child(3){height:13px}.seal b{position:absolute;right:6px;bottom:6px;width:5px;height:5px;background:var(--gold);border-radius:50%}
+      .brand-kicker,.eyebrow,.issue { font-size:10px; font-weight:800; letter-spacing:.17em; text-transform:uppercase; color:var(--blue); }
+      .brand-title { font:20px/1 "DM Serif Display",serif; letter-spacing:-.035em; }
+      .top-status { font-size:10px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--blue); }
+      .toplink { display:flex; gap:8px; align-items:center; font-size:12px; font-weight:800; text-decoration:none; }
+      .toplink:hover { color:var(--blue); }
+      .masthead { min-height:570px; display:grid; grid-template-columns:minmax(180px,.55fr) minmax(0,2.1fr) minmax(215px,.7fr); border-left:1px solid #17212e26; border-right:1px solid #17212e26; }
+      .rail { padding:40px 28px; border-right:1px solid #17212e26; display:flex; flex-direction:column; justify-content:space-between; }
+      .rail-note { border-left:2px solid var(--gold); padding-left:14px; max-width:145px; font-size:12px; font-weight:600; line-height:1.7; color:var(--muted); }
+      .rail-end { font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; line-height:1.65; color:var(--muted); }
+      .hero { padding:64px 56px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between; }
+      .dots { position:absolute; top:-86px; right:-86px; width:380px; height:380px; opacity:.34; background-image:radial-gradient(circle,#123a70 1.25px,transparent 1.6px); background-size:17px 17px; border:1px solid #123a7040; border-radius:50%; transform:rotate(18deg); }
+      .hero-content,.ledger { position:relative; z-index:1; }
+      .stamp { display:inline-flex; align-items:center; gap:7px; border:1px solid var(--gold); background:#f8efcf; padding:7px 11px; color:#73510b; font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+      h1,h2,h3,p { margin:0; } h1,h2,h3,blockquote,.serif { font-family:"DM Serif Display",serif; }
+      h1 { max-width:740px; margin-top:26px; color:var(--blue); font-size:clamp(54px,7.2vw,114px); font-weight:400; line-height:.88; letter-spacing:-.065em; }
+      h1 em { color:var(--ink); font-weight:400; }
+      .intro { max-width:610px; margin-top:32px; color:#47534d; font-size:17px; line-height:1.7; }
+      .ledger { margin-top:56px; padding-top:20px; border-top:1px solid #17212e33; display:flex; align-items:end; justify-content:space-between; gap:32px; }
+      .ledger h2 { margin-top:9px; font-size:25px; letter-spacing:-.025em; }
+      .ledger p { max-width:245px; color:var(--muted); font-size:12px; font-weight:600; line-height:1.7; }
+      .rule { padding:38px 28px; background:var(--blue); color:var(--paper); border-left:1px solid #17212e26; display:flex; flex-direction:column; }
+      .rule .eyebrow { color:#f3ca62; }.rule blockquote{margin-top:34px;font-size:33px;line-height:1.01;letter-spacing:-.04em}.rule p{margin-top:auto;padding-top:20px;border-top:1px solid #f5f1e840;font-size:12px;line-height:1.7;color:#dbe3df}
+      .path { border-top:1px solid #17212e26; border-bottom:1px solid #17212e26; background:var(--stone); }
+      .path-inner { padding:80px 0; display:grid; grid-template-columns:minmax(220px,.72fr) minmax(0,2.2fr); gap:64px; }
+      .path h2,.opening h2 { margin-top:15px; font-size:44px; font-weight:400; line-height:.95; letter-spacing:-.045em; }
+      .steps { display:grid; grid-template-columns:repeat(3,1fr); background:#17212e26; gap:1px; }.step{padding:28px;background:var(--stone)}.step-num{font-size:11px;color:var(--gold);font-weight:800;letter-spacing:.15em}.step h3{margin-top:45px;font-size:25px;letter-spacing:-.035em}.step p{margin-top:12px;color:var(--muted);font-size:14px;line-height:1.7}
+      .opening { padding:80px 0; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(290px,.8fr); align-items:end; gap:64px; border-bottom:1px solid #17212e26; }.opening h2{font-size:50px}.opening p{font-size:14px;line-height:1.7;color:var(--muted)}
+      footer { background:var(--ink); color:var(--paper); }.foot{min-height:150px;display:flex;align-items:center;justify-content:space-between;gap:36px}.foot .brand{color:var(--paper)}.foot .seal{border-color:var(--paper)}.foot .seal span{background:var(--paper)}.foot p{max-width:500px;color:#c6d0cf;font-size:12px;line-height:1.7}.foot .brand-kicker{color:#dbe3df}
+      @media (max-width:900px){.shell{padding:0 24px}.masthead{grid-template-columns:minmax(0,1fr) 238px}.rail{display:none}.hero{padding:56px 40px}.path-inner{grid-template-columns:1fr;gap:34px}.opening{grid-template-columns:1fr;gap:28px}.opening h2{font-size:44px}}
+      @media (max-width:640px){.shell{padding:0 12px}.topline{min-height:44px}.top-status{display:none}.brand{gap:7px}.seal{transform:scale(.7);transform-origin:left center;margin-right:-8px}.brand-kicker{font-size:7px}.brand-title{font-size:14px}.toplink{font-size:9px}.masthead{display:block;border:0;min-height:0}.hero{min-height:380px;padding:25px 14px 22px;border-left:1px solid #17212e26;border-right:1px solid #17212e26}.dots{width:230px;height:230px;right:-100px;top:-74px}.stamp{padding:5px 8px;font-size:8px}.hero h1{margin-top:17px;font-size:45px;max-width:330px}.intro{margin-top:22px;font-size:12px;line-height:1.7;max-width:330px}.ledger{margin-top:32px;padding-top:15px;display:block}.ledger h2{font-size:20px}.ledger p{margin-top:10px;font-size:9px;max-width:210px}.rule{min-height:202px;padding:25px 14px;border:1px solid #17212e26;border-top:0}.rule blockquote{margin-top:22px;font-size:25px}.rule p{margin-top:28px;padding-top:14px;font-size:9px}.path-inner{padding:44px 0;gap:28px}.path h2{font-size:31px;max-width:330px}.steps{display:block;background:transparent}.step{padding:22px 14px;border-bottom:1px solid #17212e26}.step h3{margin-top:24px;font-size:20px}.step p{font-size:11px}.opening{padding:44px 0;gap:24px}.opening h2{font-size:31px}.opening p{font-size:11px}.foot{min-height:148px;padding:28px 0;display:block}.foot p{margin-top:22px;font-size:9px;max-width:280px}}
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header><div class="shell topline"><a class="brand" href="#top" aria-label="EU AI Briefing home"><span class="seal"><span></span><span></span><span></span><b></b></span><span><span class="brand-kicker">EU AI</span><span class="brand-title">Briefing</span></span></a><span class="top-status">Public reader page</span><a class="toplink" href="#how-it-works">How it works ↘</a></div></header>
+    <main id="top">
+      <section class="shell"><div class="masthead"><aside class="rail"><p class="issue">Issue zero</p><p class="rail-note">Public notes for European SMEs navigating EU AI policy and practical adoption.</p><p class="rail-end">Read slowly. Check sources.</p></aside><article class="hero"><div class="dots" aria-hidden="true"></div><div class="hero-content"><p class="stamp">◉&nbsp; Human approval required</p><h1>Official EU AI signals, <em>read with care.</em></h1><p class="intro">EU AI Briefing will turn selected official EU updates into calm, practical reading for European small and medium-sized businesses.</p></div><div class="ledger"><div><p class="eyebrow">The public ledger</p><h2>The first briefing is not ready yet.</h2></div><p>Nothing appears here until a person has checked the official source.</p></div></article><aside class="rule"><p class="eyebrow">Our public rule</p><blockquote>“No automatic posts. No hidden claims. No legal conclusions.”</blockquote><p>Future briefings will point readers back to the official material and offer operational considerations, not legal advice.</p></aside></div></section>
+      <section id="how-it-works" class="path"><div class="shell path-inner"><div><p class="eyebrow">The safety path</p><h2>From source to reader, with a human in the middle.</h2></div><div class="steps"><article class="step"><p class="step-num">01</p><h3>Official source</h3><p>We begin with official EU documents and pages, not rumour or recycled headlines.</p></article><article class="step"><p class="step-num">02</p><h3>Human review</h3><p>A person checks the source and decides whether the change is important enough to explain.</p></article><article class="step"><p class="step-num">03</p><h3>Public briefing</h3><p>Only an approved, source-linked briefing can appear on this public page.</p></article></div></div></section>
+      <section class="shell opening"><div><p class="eyebrow">Opening soon</p><h2>A deliberately empty page is better than an unreviewed briefing.</h2></div><p>This public page is ready for its first approved briefing. Until then, it remains a clear record of the editorial rule: source first, person second, publication last.</p></section>
+    </main>
+    <footer><div class="shell foot"><div class="brand"><span class="seal"><span></span><span></span><span></span><b></b></span><span><span class="brand-kicker">EU AI</span><span class="brand-title">Briefing</span></span></div><p>Public reader page. Private monitoring and human review stay separate. This site provides practical context, not legal advice.</p></div></footer>
   </body>
 </html>
