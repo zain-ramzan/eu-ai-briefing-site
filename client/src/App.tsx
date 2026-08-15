@@ -1,24 +1,10 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
-/** Civic Ledger design: keep the public launch page reachable both locally and at its GitHub Pages folder address. */
-function Router() {
-  return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/eu-ai-briefing-site"} component={Home} />
-      <Route path={"/eu-ai-briefing-site/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
-  );
-}
+/** Civic Ledger design: this single public launch page deliberately has no subpages or private routes. */
 
 // NOTE: About Theme
 // - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
@@ -34,7 +20,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <Home />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
