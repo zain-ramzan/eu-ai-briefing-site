@@ -7,6 +7,6 @@
 
 ## Public-Ready Briefing Format
 
-- [ ] Add an empty public briefing archive area with no placeholder news or fictional examples.
-- [ ] Add a source-link structure for future human-approved briefings.
-- [ ] Verify that no private cards, drafts, decisions, secrets, or automatic publication action appear on the public website.
+- [x] Add an empty public briefing archive area with no placeholder news or fictional examples.
+- [x] Add a source-link structure for future human-approved briefings.
+- [x] Verify that no private cards, drafts, decisions, secrets, or automatic publication action appear on the public website.
