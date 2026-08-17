@@ -45,3 +45,9 @@
 **Wordmark & Logo:** A blue circular seal made from three offset vertical reading marks that form a small open document and a central signal line. The wordmark uses a custom serif-and-sans lockup, never a default word-only treatment.
 
 **Signature Brand Color:** **Ledger Blue — #123A70.**
+
+## Style Decisions
+
+- Major sections use one disciplined ledger grid: inset reading zones, vertical rules, and consistent alignment across the full page.
+- The source → review → public sequence is the recurring audit-trail motif. Ledger Blue carries this institutional process strip; sunflower gold appears only where a human review or approval status is emphasised.
+- The masthead uses the seal with a deliberately compressed serif-and-sans lockup so it reads as a public-interest journal rather than default text beside an icon.

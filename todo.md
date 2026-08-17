@@ -10,3 +10,9 @@
 - [x] Add an empty public briefing archive area with no placeholder news or fictional examples.
 - [x] Add a source-link structure for future human-approved briefings.
 - [x] Verify that no private cards, drafts, decisions, secrets, or automatic publication action appear on the public website.
+
+## Public Editorial Policy
+
+- [x] Add a concise public explanation of official-source standards and human review.
+- [x] Add a clear correction promise and no-legal-advice boundary.
+- [x] Verify the public policy contains no private engine details or fictional briefing content.
